@@ -1,4 +1,4 @@
-Guide to installing Docker, building Image, and running Container
+Guide to installing Docker, building Image, and running Container:
 Installation latest Docker (docker-engine 1.12.5-0~ubuntu-xenial) on Ubuntu Xenial 16.04 (LTS):
 1. Copy the following commands for quickly & easily installing via latest docker-engine (Ubuntu, Debian, Raspbian, Fedora, Centos, Redhat, Suse, Oracle, Linux et al., all applicable):
 $ curl -sSL https://get.docker.com/ | bash -x
@@ -19,7 +19,7 @@ $ docker version
 On your host, type the following command lines to log into a BGDMdocker Container: 
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_
 biodocker.git
-or: download °∞debian_prokka_panx_antismash_biodocker-master.zip°± file
+or: download ‚Äúdebian_prokka_panx_antismash_biodocker-master.zip‚Äù file
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip 
 
 Building images of workflow:
@@ -27,29 +27,29 @@ $ cd ./debian_prokka_panx_antismash_biodocker/prokka_panx_antismash_dockerfile
 $ sudo docker build -t BGDMdocker:latest .
 
 Running a Container from image of BGDMdocker:latest: 
-$ sudo docker run -it --rm ®Cv home:home ®Cp 8000:8000 --name=BGDM-docker BGDMdocker:latest
-If you use the °∞-v home:home°± parameter, Docker will mount the local folder /home into the Container under /home, storing all of your data in one directory in the home folder of the host operating system; then, you may access directories of home from inside the container.
+$ sudo docker run -it --rm ‚Äìv home:home ‚Äìp 8000:8000 --name=BGDM-docker BGDMdocker:latest
+If you use the ‚Äú-v home:home‚Äù parameter, Docker will mount the local folder /home into the Container under /home, storing all of your data in one directory in the home folder of the host operating system; then, you may access directories of home from inside the container.
 Guide for workflow usage (running inside Container)
-Running Prokka genome annotation in Container in interaction patterns (if you have your own genome sequences, you need this step to generate °∞*.gbff°± annotation files):
+Running Prokka genome annotation in Container in interaction patterns (if you have your own genome sequences, you need this step to generate ‚Äú*.gbff‚Äù annotation files):
 1. Check out help documentation and command parameters:
-$ prokka ®Chelp
+$ prokka ‚Äìhelp
 2. Copy the following commands to run the analysis for genome annotation of Ba_xx strains from the command-line interface of container (for boldface text, please enter your data): 
 $ prokka --kingdom Bacteria --gcode 11 --genus Bacillus \
 --species Amyloliquefaciens \
 --strain Ba_xx --locustag Ba_xx --prefix Ba_xx --rfam \
 --rawproduct --outdir /home/manager/PRJNA291327 \
 /home/manager/Ba_xx.fasta
-°∞Ba_xx.fasta°± is the genome sequence, °∞PRJNA291327°± is the output folder of results.
+‚ÄúBa_xx.fasta‚Äù is the genome sequence, ‚ÄúPRJNA291327‚Äù is the output folder of results.
 
 Running panX analysis on pan-genome in Container in interaction patterns:
 PanX starts with a set of annotated sequences files, *.gbff (.gbk) (e.g., NCBI RefSeq or GenBank), from a bacterial species genome. 
 1. Check out help documentation and command parameters of panX:
 $ sh run.sh
-2. Copy the following commands to run the analysis of the pan-genome of 44 B. amyloliquefaciens strains from the command-line interface of Container (for boldface text, please enter your data). If using your own GenBank files (or if you have downloaded these files), parameter °∞2°± can be skipped when running °∞run-pipeline.py°±. For detailed parameters see here:
+2. Copy the following commands to run the analysis of the pan-genome of 44 B. amyloliquefaciens strains from the command-line interface of Container (for boldface text, please enter your data). If using your own GenBank files (or if you have downloaded these files), parameter ‚Äú2‚Äù can be skipped when running ‚Äúrun-pipeline.py‚Äù. For detailed parameters see here:
 $ cd /pan-genome-analysis
 $ python ./scripts/run-pipeline.py -fn ./data/B_amy -sl B_amy-
 RefSeq.txt -st 1 3 4 5 6 7 8 9 10 11
-*.gbff (GenBank files) and B_amy-RefSeq.txt (accession list for strains) should reside in °∞./data/B_amy°± folder. The result will also be output to the °∞./data/B_amy°± folder.
+*.gbff (GenBank files) and B_amy-RefSeq.txt (accession list for strains) should reside in ‚Äú./data/B_amy‚Äù folder. The result will also be output to the ‚Äú./data/B_amy‚Äù folder.
 3. Visualization of the pan-genome of 44 B. amyloliquefaciens strains (run in container):
 $ python link-to-server.py B_amy 
 $ add-new-pages-repo.sh B_amy
@@ -69,12 +69,12 @@ $ run_antismash.py /home/manager/input/Y2.gbff \
 --pfamdir ./generic_modules/fullhmmer --input-type nucl --knownclusterblast \
 --clusterblast --subclusterblast --inclusive --full-hmmer --smcogs --verbose --asf \
 --borderpredict 
-*.gbff (GenBank files) should reside in °∞input°± folder. °∞Y2 _out°± is the output folder for results.
+*.gbff (GenBank files) should reside in ‚Äúinput‚Äù folder. ‚ÄúY2 _out‚Äù is the output folder for results.
 Recommendation for building workflow using standalone Dockerfile:
 In order to meet the needs of different users, we also provide a standalone Dockerfile for Prokka, panX, and antiMASH. You can build images and run Container separately. 
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_
 docker.git
-Or: download °∞.zip°±file
+Or: download ‚Äú.zip‚Äùfile
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip
 
 Building images of Prokka standalone:
@@ -88,7 +88,7 @@ $ prokka --kingdom Bacteria --gcode 11 --genus Bacillus \
 --strain Ba_xx --locustag Ba_xx --prefix Ba_xx --rfam \
 --rawproduct --outdir /home/manager/PRJNA291327 \
 /home/manager/Ba_xx.fasta
-°∞Ba_xx.fasta°± is the sequence of the genome; °∞PRJNA291327°± is the output folder of results.
+‚ÄúBa_xx.fasta‚Äù is the sequence of the genome; ‚ÄúPRJNA291327‚Äù is the output folder of results.
 
 Building images of panX standalone:
 $ cd ./debian_prokka_panx_antismash_docker/debian_panx_standalone_dockerfile
@@ -98,7 +98,7 @@ $ sudo docker run -it --rm -v home:home --name debian_panx debian_panx:latest
 2. Copy the following commands to run the analysis for the pan-genome of 44 B. amyloliquefaciens strains from the command-line interface of container (for boldface text, please replace with your own data if applicable):
 $ cd /pan-genome-analysis
 $ python ./scripts/run-pipeline.py -fn ./data/B_amy -sl B_amy-RefSeq.txt -st 1 3 4 5 6 7 8 9 10 11
-*.gbff (GenBank files) and B_amy-RefSeq.txt (accession list for strains) should be in the °∞./data/B_amy°± folder; output results will be also in °∞./data/B_amy°± folder. 
+*.gbff (GenBank files) and B_amy-RefSeq.txt (accession list for strains) should be in the ‚Äú./data/B_amy‚Äù folder; output results will be also in ‚Äú./data/B_amy‚Äù folder. 
 3. Visualize the pan-genome of 44 B. amyloliquefaciens strains (run in container):
 $ python link-to-server.py B_amy 
 $ add-new-pages-repo.sh B_amy
@@ -120,18 +120,18 @@ $ run_antismash.py /home/manager/input/Y2.gbff \
 --pfamdir ./generic_modules/fullhmmer --input-type nucl --knownclusterblast \
 --clusterblast --subclusterblast --inclusive --full-hmmer --smcogs --verbose --asf \
 --borderpredict 
-*.gbff (GenBank files) reside in °∞input°±folder; °∞Y2 _out°± is the output folder for results.
+*.gbff (GenBank files) reside in ‚Äúinput‚Äùfolder; ‚ÄúY2 _out‚Äù is the output folder for results.
 
-Tip: How can I download all °∞genomic.gbff.gz°± of specified species from RefSeq or GenBank databases?
-Downloading all °∞*genomic.gbff.gz°± of specified species from RefSeq or GenBank databases (replace boldface text with your species if applicable):
+Tip: How can I download all ‚Äúgenomic.gbff.gz‚Äù of specified species from RefSeq or GenBank databases?
+Downloading all ‚Äú*genomic.gbff.gz‚Äù of specified species from RefSeq or GenBank databases (replace boldface text with your species if applicable):
 1. Installing script on your host
 $ wget 
 ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/versions/current/edirect.zip
 $ unzip -u -q edirect.zip
 $ export PATH=$PATH:$HOME/edirect
 $ ./edirect/setup.sh
-2. Download °∞*genomic.gbff.gz°± of all strains of Bacillus amyloliquefaciens from GenBank
+2. Download ‚Äú*genomic.gbff.gz‚Äù of all strains of Bacillus amyloliquefaciens from GenBank
 $ esearch -db assembly -query "Bacillus amyloliquefaciens [ORGN]" | efetch -format docsum | xtract -pattern "DocumentSummary" -element FtpPath_GenBank | sed 's/$/\/*genomic.gbff.gz/' |xargs wget -c -nd;sleep 3s;
 Or:
-3. Download °∞*genomic.gbff.gz°± of all Bacillus amyloliquefaciens strains from RefSeq
+3. Download ‚Äú*genomic.gbff.gz‚Äù of all Bacillus amyloliquefaciens strains from RefSeq
 $ esearch -db assembly -query "Bacillus amyloliquefaciens[ORGN]" | efetch -format docsum | xtract -pattern "DocumentSummary" -element FtpPath_RefSeq | sed 's/$/\/*genomic.gbff.gz/' |xargs wget -c -nd;sleep 3s;
