@@ -1,11 +1,11 @@
 ﻿Guide to installing Docker, building Image, and running Container
-Installation latest Docker (docker-engine 1.12.5-0~ubuntu-xenial) on Ubuntu Xenial 16.04 (LTS):
-1. Copy the following commands for quickly & easily installing via latest docker-engine (Ubuntu, Debian, Raspbian, Fedora, Centos, Redhat, Suse, Oracle, Linux et al., all applicable):
-$ curl -sSL https://get.docker.com/ | bash -x
-or:
-$ wget -qO- https://get.docker.com/ | bash -x
-2. Type the following commands at your shell prompt. If it outputs the Docker version, your installation was successful: 
-$ docker version
+Installation latest Docker (docker-engine 1.12.5-0~ubuntu-xenial) on Ubuntu Xenial 16.04 (LTS):  
+1. Copy the following commands for quickly & easily installing via latest docker-engine (Ubuntu, Debian, Raspbian, Fedora, Centos, Redhat, Suse, Oracle, Linux et al., all applicable):  
+$ curl -sSL https://get.docker.com/ | bash -x  
+or:  
+$ wget -qO- https://get.docker.com/ | bash -x  
+2. Type the following commands at your shell prompt. If it outputs the Docker version, your installation was successful:   
+$ docker version  
 
 Installing latest Docker on Windows 10 Enterprise:
 The current version of Docker for Windows runs on 64-bit Windows 10 Pro, Enterprise, and Education editions.
