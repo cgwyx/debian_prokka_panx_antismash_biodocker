@@ -74,9 +74,8 @@ $ run_antismash.py /home/manager/input/Y2.gbff \
 *.gbff (GenBank files) should reside in “input” folder. “Y2 _out” is the output folder for results.
 Recommendation for building workflow using standalone Dockerfile:
 In order to meet the needs of different users, we also provide a standalone Dockerfile for Prokka, panX, and antiMASH. You can build images and run Container separately. 
-$ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_
-docker.git
-Or: download “.zip”file
+$ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_docker.git
+  Or: download “.zip”file
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip
 
 Building images of Prokka standalone:
