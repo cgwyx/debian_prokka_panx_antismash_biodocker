@@ -19,7 +19,8 @@ $ docker version
 On your host, type the following command lines to log into a BGDMdocker Container:   
 1.Get Dockerfile  
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker.git  
-or:  download “debian_prokka_panx_antismash_biodocker-master.zip” file  
+or:  
+download “debian_prokka_panx_antismash_biodocker-master.zip” file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip   
 2.Building images of workflow:  
 $ cd ./debian_prokka_panx_antismash_biodocker/prokka_panx_antismash_dockerfile  
