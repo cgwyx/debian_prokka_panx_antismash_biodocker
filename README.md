@@ -20,7 +20,7 @@ On your host, type the following command lines to log into a BGDMdocker Containe
 1.Get Dockerfile  
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker.git  
 or:  
-download “debian_prokka_panx_antismash_biodocker-master.zip” file  
+download “[debian_prokka_panx_antismash_biodocker-master.zip](https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker/archive/master.zip)” file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip   
 2.Building images of workflow:  
 $ cd ./debian_prokka_panx_antismash_biodocker/prokka_panx_antismash_dockerfile  
@@ -74,7 +74,7 @@ Recommendation for building workflow using standalone Dockerfile:
 In order to meet the needs of different users, we also provide a standalone Dockerfile for Prokka, panX, and antiMASH. You can build images and run Container separately.   
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_  
 docker.git  
-Or: download “.zip”file  
+Or: download “[debian_prokka_panx_antismash_biodocker-master.zip](https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker/archive/master.zip)”file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip  
 
 Building images of Prokka standalone:  
