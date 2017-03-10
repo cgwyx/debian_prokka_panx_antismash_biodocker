@@ -17,7 +17,7 @@ The current version of Docker for Windows runs on 64-bit Windows 10 Pro, Enterpr
 $ docker version  
 
 On your host, type the following command lines to log into a BGDMdocker Container:   
-1.Get Dockerfile
+1.Get Dockerfile  
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker.git  
 or: download “debian_prokka_panx_antismash_biodocker-master.zip” file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip   
