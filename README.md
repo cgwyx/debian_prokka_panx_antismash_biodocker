@@ -45,7 +45,7 @@ Running panX analysis on pan-genome in Container in interaction patterns:
 PanX starts with a set of annotated sequences files, *.gbff (.gbk) (e.g., NCBI RefSeq or GenBank), from a bacterial species genome.   
 1. Check out help documentation and command parameters of panX:  
 $ sh run.sh  
-2. Copy the following commands to run the analysis of the pan-genome of 44 B. amyloliquefaciens strains from the command-line interface of Container (for boldface text, please enter your data). If using your own GenBank files (or if you have downloaded these files), parameter “2” can be skipped when running “run-pipeline.py”. For detailed parameters see here:  
+2. Copy the following commands to run the analysis of the pan-genome of 44 B. amyloliquefaciens strains from the command-line interface of Container (for boldface text, please enter your data). If using your own GenBank files (or if you have downloaded these files), parameter “2” can be skipped when running “run-pipeline.py”. For detailed parameters see  [here](https://github.com/neherlab/pan-genome-analysis/tree/handle_premature_stop_codon):  
 $ cd /pan-genome-analysis  
 $ python ./scripts/run-pipeline.py -fn ./data/B_amy -sl B_amy-RefSeq.txt -st 1 3 4 5 6 7 8 9 10 11  
 *.gbff (GenBank files) and B_amy-RefSeq.txt (accession list for strains) should reside in “./data/B_amy” folder. The result will also be output to the “./data/B_amy” folder.  
