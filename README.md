@@ -17,15 +17,14 @@ The current version of Docker for Windows runs on 64-bit Windows 10 Pro, Enterpr
 $ docker version  
 
 On your host, type the following command lines to log into a BGDMdocker Container:   
+1.Get Dockerfile
 $ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker.git  
 or: download “debian_prokka_panx_antismash_biodocker-master.zip” file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip   
-
-Building images of workflow:  
+2.Building images of workflow:  
 $ cd ./debian_prokka_panx_antismash_biodocker/prokka_panx_antismash_dockerfile  
 $ sudo docker build -t BGDMdocker:latest .  
-
-Running a Container from image of BGDMdocker:latest:   
+3.Running a Container from image of BGDMdocker:latest:   
 $ sudo docker run -it --rm –v home:home –p 8000:8000 --name=BGDM-docker BGDMdocker:latest  
 If you use the “-v home:home” parameter, Docker will mount the local folder /home into the Container under /home, storing all of your data in one directory in the home folder of the host operating system; then, you may access directories of home from inside the container.  
 
