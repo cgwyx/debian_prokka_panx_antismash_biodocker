@@ -6,10 +6,10 @@
 # Software Version: 3.0.5.1
 # Description:      genome mining of biosynthetic gene clusters
 # Code:             https://bitbucket.org/antismash/antismash/downloads/
-# Base Image:       debian:jessie
-# Build Cmd:        sudo docker build -t debian_antismash:antismash3.0.5_docker1.0 .
-# Pull Cmd:         docker pull debian_antismash:antismash3.0.5_docker1.0
-# Run Cmd:          sudo docker run -it --rm -v /home:/home --name=antismash3.0.5 debian_antismash:antismash3.0.5_docker1.0
+# Base Image:       debian:latest
+# Build Cmd:        sudo docker build -t debian_antismash:antismash3.0.5.1_docker1.0 .
+# Pull Cmd:         docker pull debian_antismash:antismash3.0.5.1_docker1.0
+# Run Cmd:          sudo docker run -it --rm -v /home:/home --name=antismash3.0.5.1 debian_antismash:antismash3.0.5_docker1.0
 # File Author / Maintainer: cheng gong <512543469@qq.com>
 #################################################################
 
@@ -56,7 +56,7 @@ RUN apt-get update && \
 
 # Grab antiSMASH
 ADD ${ANTISMASH_URL}/antismash-${ANTISMASH_VERSION}.tar.gz /
-RUN tar xf /home/antismash-${ANTISMASH_VERSION}.tar.gz
+RUN tar xf /antismash-${ANTISMASH_VERSION}.tar.gz
 
 # Grab the databases
 WORKDIR antismash-${ANTISMASH_VERSION}
