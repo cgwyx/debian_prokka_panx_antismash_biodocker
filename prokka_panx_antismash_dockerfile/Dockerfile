@@ -137,7 +137,7 @@ EXPOSE :8000
 ###antiSMASH installation###
 
 ENV ANTISMASH_URL="https://bitbucket.org/antismash/antismash/downloads"
-ENV ANTISMASH_VERSION="3.0.5"
+ENV ANTISMASH_VERSION="3.0.5.1"
 
 # set up antiSMASH deb repo
 ADD http://dl.secondarymetabolites.org/antismash.list /etc/apt/sources.list.d/antismash.list
