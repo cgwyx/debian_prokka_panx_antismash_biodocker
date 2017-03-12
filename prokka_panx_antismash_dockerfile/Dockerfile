@@ -148,23 +148,26 @@ RUN apt-key add /tmp/antismash.asc
 RUN apt-get update && \
     apt-get install -y \
     #ncbi-blast+ \#
-		glimmerhmm \ 
-		tigr-glimmer \ 
-		diamond \
-		hmmer2 \ 
-		hmmer \ 
-		hmmer2-compat \ 
-		muscle \ 
-		prodigal \ 
-		fasttree \ 
-		default-jre-headless \ 
-		python-straight.plugin \ 
-		python-pysvg \ 
-		python-helperlibs \ 
-		#python-biopython
-		python-pyquery \ 
-		python-backports.lzma \ 
-		python-matplotlib
+    glimmerhmm \ 
+    tigr-glimmer \ 
+    diamond \
+    hmmer2 \ 
+    hmmer \ 
+    hmmer2-compat \ 
+    muscle \ 
+    prodigal \ 
+    fasttree \ 
+    default-jre-headless \ 
+    python-straight.plugin \ 
+    python-pysvg \ 
+    python-helperlibs \ 
+    #python-biopython
+    python-pyquery \ 
+    python-backports.lzma \ 
+    python-matplotlib && \
+    apt-get clean && \
+    apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     ###antismash packages finsh###
 
 
@@ -173,7 +176,7 @@ ADD ${ANTISMASH_URL}/antismash-${ANTISMASH_VERSION}.tar.gz /
 RUN tar xf /antismash-${ANTISMASH_VERSION}.tar.gz
 
 #RUN wget ${ANTISMASH_URL}/antismash-${ANTISMASH_VERSION}.tar.gz
-#ADD ./antismash-3.0.5.tar.gz /
+#ADD ./antismash-3.0.5.1.tar.gz /
 
 # Grab the databases
 WORKDIR /antismash-${ANTISMASH_VERSION}
