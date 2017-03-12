@@ -3,10 +3,10 @@
 #
 # Version:          1.0
 # Software:         prokka,panX&antismash
-# Software Version: 1.12,1.0,3.0.5
+# Software Version: 1.12,1.0,3.0.5.1
 # Description:      BGDMdocker: an workflow base on Docker for analysis and visualization pan-genome and biosynthetic gene clusters of Bacterial
 # Code:             https://github.com/cgwyx/debian_prokka_panx_antismash_docker
-# Base Image:       debian:jessie
+# Base Image:       debian:latest
 # Build Cmd:        sudo docker build -t BGDMdocker:latest .
 # Pull Cmd:         docker pull BGDMdocker:latest
 # Run Cmd:          sudo docker run -it --rm -v /home:/home -p 8000:8000 --name=BGDMdocker BGDMdocker:latest
@@ -184,7 +184,7 @@ ADD ./instance.cfg antismash/config/instance.cfg
 WORKDIR /usr/local/bin
 RUN ln -s /antismash-${ANTISMASH_VERSION}/run_antismash.py
 
-WORKDIR /antismash-3.0.5/antismash/
+WORKDIR /antismash-${ANTISMASH_VERSION}/antismash/
 ##antiSMASH installation finsh##
 
 
