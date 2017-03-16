@@ -164,10 +164,10 @@ RUN apt-get update && \
     #python-biopython
     python-pyquery \ 
     python-backports.lzma \ 
-    python-matplotlib && \
-    apt-get clean && \
-    apt-get purge && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    python-matplotlib
+    #apt-get clean && \
+    #apt-get purge && \
+    #rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     ###antismash packages finsh###
 
 
