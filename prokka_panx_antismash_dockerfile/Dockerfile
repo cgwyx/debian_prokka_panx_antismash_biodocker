@@ -147,7 +147,7 @@ RUN apt-key add /tmp/antismash.asc
 ###antismash packages###
 RUN apt-get update && \
     apt-get install -y \
-    #ncbi-blast+ \#
+    #ncbi-blast+
     glimmerhmm \ 
     tigr-glimmer \ 
     diamond \
@@ -164,10 +164,10 @@ RUN apt-get update && \
     #python-biopython
     python-pyquery \ 
     python-backports.lzma \ 
-    python-matplotlib
-    #apt-get clean && \
-    #apt-get purge && \
-    #rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    python-matplotlib && \
+    apt-get clean && \
+    apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     ###antismash packages finsh###
 
 
