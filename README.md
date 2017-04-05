@@ -77,7 +77,7 @@ Or: download “[debian_prokka_panx_antismash_biodocker-master.zip](https://gith
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip  
 
 Building images of Prokka standalone:  
-$ cd ./debian_prokka_panx_antismash_docker/debian_prokka_standalone_dockerfile  
+$ cd ./debian_prokka_panx_antismash_biodocker/debian_prokka_standalone_dockerfile  
 $ sudo docker build -t debian_prokka: latest .  
 1. Run a Container from image of debian_prokka:  
 $ sudo docker run -it --rm -v home:home --name Prokka-latest prokka:latest  
@@ -90,7 +90,7 @@ $ prokka --kingdom Bacteria --gcode 11 --genus Bacillus \
 “Ba_xx.fasta” is the sequence of the genome; “PRJNA291327” is the output folder of results.  
 
 Building images of panX standalone:  
-$ cd ./debian_prokka_panx_antismash_docker/debian_panx_standalone_dockerfile  
+$ cd ./debian_prokka_panx_antismash_biodocker/debian_panx_standalone_dockerfile  
 $ sudo docker build -t debian_panx:latest .  
 1. Run a container from image of debian_panx  
 $ sudo docker run -it --rm -v home:home --name debian_panx debian_panx:latest  
@@ -107,7 +107,7 @@ Then open http://localhost:8000/B_amy with web browser, you can access the visua
 $ sudo docker commit <ID of container > <name of new images >  
 
 Building images of antiSAMSH standalone:  
-$ cd ./debian_prokka_panx_antismash_docker/debian_antismash_standalone_dockerf-ile  
+$ cd ./debian_prokka_panx_antismash_biodocker/debian_antismash_standalone_dockerf-ile  
 $ sudo docker build -t debian_antismas:latest .   
 1. Run a container from image of debian_antismas  
 $ sudo docker run -it --rm -v home:home --name antiSAMSH debian_antismas:latest  
