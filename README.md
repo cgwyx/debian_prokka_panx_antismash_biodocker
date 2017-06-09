@@ -72,7 +72,7 @@ $ run_antismash.py /home/manager/input/Y2.gbff \
 
 Recommendation for building workflow using standalone Dockerfile:
 In order to meet the needs of different users, we also provide a standalone Dockerfile for Prokka, panX, and antiMASH. You can build images and run Container separately.   
-$ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_docker.git  
+$ git clone https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker.git  
 Or: download “[debian_prokka_panx_antismash_biodocker-master.zip](https://github.com/cgwyx/debian_prokka_panx_antismash_biodocker/archive/master.zip)”file  
 $ unzip debian_prokka_panx_antismash_biodocker-master.zip  
 
