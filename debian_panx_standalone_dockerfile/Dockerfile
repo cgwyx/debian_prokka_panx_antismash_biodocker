@@ -18,9 +18,6 @@ FROM debian:stretch
 
 MAINTAINER cheng gong <512543469@qq.com>
 
-RUN echo "deb ftp://ftp.cn.debian.org/debian/ sid main contrib non-free" >>/etc/apt/sources.list && \
-    echo "deb-src ftp://ftp.cn.debian.org/debian/ sid main contrib non-free" >>/etc/apt/sources.list
-
 # Update the repository sources list
 RUN apt-get clean all && \
     apt-get update && \
