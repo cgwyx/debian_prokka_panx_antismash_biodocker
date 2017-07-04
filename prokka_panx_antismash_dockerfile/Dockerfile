@@ -59,7 +59,7 @@ RUN apt-get update && \
 ###prokka installation ###    
 # Java Version
 ENV  JAVA_VERSION=8 \
-     JAVA_UPDATE=111 \
+     JAVA_UPDATE=112 \
      JAVA_BUILD=14  \
      JAVA_HOME=/usr/lib/jvm/current-java
 
