@@ -15,10 +15,10 @@
 
 FROM continuumio/miniconda
 
-RUN conda update --all \
-    conda config --add channels r \
-    conda config --add channels bioconda \
-    conda config --set show_channel_urls yes \
+RUN conda update --all &&\
+    conda config --add channels r &&\
+    conda config --add channels bioconda &&\
+    conda config --set show_channel_urls yes &&\
     conda install prokka
 
 CMD ["/bin/bash"]
